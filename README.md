@@ -15,7 +15,7 @@ If Vim Plug is not setup yet, open up PowerShell and run:
 )
 ```
 
-Clone this repository into ***~/AppData/Local/nvim, then run:
+Clone this repository into **~/AppData/Local/nvim/, open up init.vim and run:
 
 ```
 :PlugInstall
