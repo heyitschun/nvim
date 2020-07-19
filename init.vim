@@ -78,5 +78,8 @@ set splitright
 "" NERDTree toggle
 map <C-m> :NERDTreeToggle<CR>
 
+"" fzf Fuzzy finder
+map ; :Files<CR>
+
 " Language settings
 let g:vim_vue_plugin_use_sass = 1
