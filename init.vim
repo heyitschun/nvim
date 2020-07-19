@@ -4,33 +4,43 @@
 " Plugins
 call plug#begin('~/AppData/Local/nvim-data/plugged')
 
-" Interface
-Plug 'itchyny/lightline.vim'
-Plug 'tpope/vim-fugitive'
-
-" Themes
+" Integration
 Plug 'jiangmiao/auto-pairs'
 Plug 'mattn/emmet-vim'
 Plug 'junegunn/fzf.vim'
 Plug 'Yggdroot/indentLine'
 Plug 'preservim/nerdcommenter'
 Plug 'preservim/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'machakann/vim-sandwich'
+
+" Interface
+Plug 'itchyny/lightline.vim'
+Plug 'tpope/vim-fugitive'
+
+" Language
+Plug 'maxmellon/vim-jsx-pretty'
+Plug 'leafoftree/vim-vue-plugin'
+
+" Themes
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'eemed/sitruuna.vim'
 Plug 'sainnhe/sonokai'
 Plug 'heyitschun/vim-boho'
+Plug 'arzg/vim-colors-xcode'
 Plug 'ntk148v/vim-horizon'
-Plug 'maxmellon/vim-jsx-pretty'
 Plug 'heyitschun/vim-rainier'
-Plug 'machakann/vim-sandwich'
-Plug 'posva/vim-vue'
 
 call plug#end()
 
 " Look and feel
 set termguicolors
 set guifont=Code\ New\ Roman:h13
-colorscheme sitruuna
+colorscheme PaperColor
+
+"" Indent guides
+let g:indentLine_char = '▏'
 
 " Lightline
 set noshowmode
@@ -46,6 +56,7 @@ let g:lightline = {
 
 " Line numbers, indentation, rulers
 set number
+set colorcolumn=80
 
 " Word wrap
 set formatoptions=1
@@ -56,3 +67,16 @@ set lbr
 inoremap <C-v> <ESC>"+pa
 vnoremap <C-c> "+y
 
+"" Better splits
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+set splitbelow
+set splitright
+
+"" NERDTree toggle
+map <C-m> :NERDTreeToggle<CR>
+
+" Language settings
+let g:vim_vue_plugin_use_sass = 1
