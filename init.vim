@@ -6,6 +6,7 @@ call plug#begin('~/AppData/Local/nvim-data/plugged')
 
 " Integration
 Plug 'jiangmiao/auto-pairs'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'mattn/emmet-vim'
 Plug 'Yggdroot/indentLine'
@@ -32,13 +33,14 @@ Plug 'heyitschun/vim-boho'
 Plug 'tomasiser/vim-code-dark'
 Plug 'ntk148v/vim-horizon'
 Plug 'heyitschun/vim-rainier'
+Plug 'heyitschun/vim-seven'
 
 call plug#end()
 
 " Look and feel
 set termguicolors
 set guifont=Code\ New\ Roman:h13
-colorscheme srcery
+colorscheme seven
 set background=dark
 let g:NERDTreeWinSize=20
 
@@ -48,6 +50,7 @@ let g:indentLine_char='▏'
 " Lightline
 set noshowmode
 let g:lightline = {
+      \ 'colorscheme': 'wombat',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
@@ -59,6 +62,8 @@ let g:lightline = {
 
 " Line numbers, indentation, rulers
 set number
+highlight LineNr ctermfg=DarkGrey gui=NONE guifg=#6c6c6c guibg=NONE
+highlight ColorColumn ctermbg=230 guibg=#2c2d27
 set colorcolumn=80
 filetype plugin indent on
 set expandtab
