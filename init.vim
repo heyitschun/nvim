@@ -89,8 +89,22 @@ nnoremap <C-H> <C-W><C-H>
 set splitbelow
 set splitright
 
-"" NERDTree toggle
+" NERDTree
 map <C-m> :NERDTreeToggle<CR>
+let NERDTreeShowHidden=1
+let g:NERDTreeIndicatorMapCustom = {
+    \ 'Modified'  : '~',
+    \ 'Staged'    : '+',
+    \ 'Untracked' : '*',
+    \ 'Renamed'   : '»',
+    \ 'Unmerged'  : '═',
+    \ 'Deleted'   : '-',
+    \ 'Dirty'     : 'x',
+    \ 'Clean'     : 'ø',
+    \ 'Ignored'   : '*',
+    \ 'Unknown'   : '?'
+    \ }
+
 
 "" CtrlP
 map ; :CtrlPMixed<CR>
