@@ -22,15 +22,20 @@ Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-fugitive'
 
 " Language
+Plug 'leafgarland/typescript-vim'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'leafoftree/vim-vue-plugin'
 
 " Themes
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'eemed/sitruuna.vim'
+Plug 'liuchengxu/space-vim-theme'
 Plug 'srcery-colors/srcery-vim'
+Plug 'koirand/tokyo-metro.vim'
+Plug 'heyitschun/vim-ariake'
 Plug 'heyitschun/vim-boho'
-Plug 'tomasiser/vim-code-dark'
+Plug 'heyitschun/vim-miaminights'
+Plug 'arzg/vim-colors-xcode'
 Plug 'ntk148v/vim-horizon'
 Plug 'heyitschun/vim-rainier'
 Plug 'heyitschun/vim-seven'
@@ -39,18 +44,18 @@ call plug#end()
 
 " Look and feel
 set termguicolors
-set guifont=Code\ New\ Roman:h13
-colorscheme seven
+set guifont=Input:h11
+colorscheme boho
 set background=dark
-let g:NERDTreeWinSize=20
 
-"" Indent guides
+
+" Indent guides
 let g:indentLine_char='▏'
 
 " Lightline
 set noshowmode
 let g:lightline = {
-      \ 'colorscheme': 'wombat',
+      \ 'colorscheme': 'sitruuna',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
@@ -61,9 +66,10 @@ let g:lightline = {
       \ }
 
 " Line numbers, indentation, rulers
+set cursorline
 set number
 highlight LineNr ctermfg=DarkGrey gui=NONE guifg=#6c6c6c guibg=NONE
-highlight ColorColumn ctermbg=230 guibg=#2c2d27
+highlight ColorColumn ctermbg=250 guibg=#3E3F3C
 set colorcolumn=80
 filetype plugin indent on
 set expandtab
@@ -91,6 +97,8 @@ set splitright
 
 " NERDTree
 map <C-m> :NERDTreeToggle<CR>
+let g:NERDTreeWinSize=20
+let g:NERDTreeWinPos="right"
 let NERDTreeShowHidden=1
 let g:NERDTreeIndicatorMapCustom = {
     \ 'Modified'  : '~',
@@ -104,7 +112,6 @@ let g:NERDTreeIndicatorMapCustom = {
     \ 'Ignored'   : '*',
     \ 'Unknown'   : '?'
     \ }
-
 
 "" CtrlP
 map ; :CtrlPMixed<CR>
