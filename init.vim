@@ -34,6 +34,7 @@ Plug 'srcery-colors/srcery-vim'
 Plug 'koirand/tokyo-metro.vim'
 Plug 'heyitschun/vim-ariake'
 Plug 'heyitschun/vim-boho'
+Plug 'skielbasa/vim-material-monokai'
 Plug 'heyitschun/vim-miaminights'
 Plug 'arzg/vim-colors-xcode'
 Plug 'ntk148v/vim-horizon'
@@ -45,7 +46,7 @@ call plug#end()
 " Look and feel
 set termguicolors
 set guifont=Input:h11
-colorscheme boho
+colorscheme miaminights
 set background=dark
 
 
@@ -55,7 +56,7 @@ let g:indentLine_char='▏'
 " Lightline
 set noshowmode
 let g:lightline = {
-      \ 'colorscheme': 'sitruuna',
+      \ 'colorscheme': 'miaminights',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
