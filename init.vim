@@ -23,32 +23,30 @@ Plug 'tpope/vim-fugitive'
 
 " Language
 Plug 'leafgarland/typescript-vim'
+Plug 'fatih/vim-go'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'leafoftree/vim-vue-plugin'
 
 " Themes
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'eemed/sitruuna.vim'
-Plug 'liuchengxu/space-vim-theme'
 Plug 'srcery-colors/srcery-vim'
 Plug 'koirand/tokyo-metro.vim'
 Plug 'heyitschun/vim-ariake'
 Plug 'heyitschun/vim-boho'
-Plug 'skielbasa/vim-material-monokai'
 Plug 'heyitschun/vim-miaminights'
-Plug 'arzg/vim-colors-xcode'
-Plug 'ntk148v/vim-horizon'
+Plug 'patstockwell/vim-monokai-tasty'
 Plug 'heyitschun/vim-rainier'
 Plug 'heyitschun/vim-seven'
+Plug 'lifepillar/vim-solarized8'
 
 call plug#end()
 
 " Look and feel
 set termguicolors
-set guifont=Input:h11
-colorscheme miaminights
+set guifont=Consolas:h13
+colorscheme vim-monokai-tasty
 set background=dark
-
 
 " Indent guides
 let g:indentLine_char='▏'
@@ -56,10 +54,11 @@ let g:indentLine_char='▏'
 " Lightline
 set noshowmode
 let g:lightline = {
-      \ 'colorscheme': 'miaminights',
+      \ 'colorscheme': 'monokai_tasty',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+      \             [ 'gitbranch', 'readonly', 'modified' ] ],
+      \   'right': [ [ 'filename', 'lineinfo' ] ]
       \ },
       \ 'component_function': {
       \   'gitbranch': 'FugitiveHead'
