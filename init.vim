@@ -21,16 +21,16 @@ Plug 'machakann/vim-sandwich'
 Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-fugitive'
 
-" Language
+" Languages
 Plug 'leafgarland/typescript-vim'
 Plug 'fatih/vim-go'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'leafoftree/vim-vue-plugin'
 
 " Themes
+Plug 'atelierbram/Base2Tone-vim'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'eemed/sitruuna.vim'
-Plug 'srcery-colors/srcery-vim'
 Plug 'koirand/tokyo-metro.vim'
 Plug 'heyitschun/vim-ariake'
 Plug 'heyitschun/vim-boho'
@@ -49,7 +49,7 @@ colorscheme vim-monokai-tasty
 set background=dark
 
 " Indent guides
-let g:indentLine_char='▏'
+let g:indentLine_char='│'
 
 " Lightline
 set noshowmode
