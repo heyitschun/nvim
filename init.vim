@@ -14,6 +14,7 @@ Plug 'preservim/nerdcommenter'
 Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'danro/rename.vim'
+Plug 'takac/vim-hardtime'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'machakann/vim-sandwich'
 
@@ -29,6 +30,7 @@ Plug 'leafoftree/vim-vue-plugin'
 
 " Themes
 Plug 'atelierbram/Base2Tone-vim'
+Plug 'heraldofsolace/nisha-vim'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'eemed/sitruuna.vim'
 Plug 'koirand/tokyo-metro.vim'
@@ -38,14 +40,16 @@ Plug 'heyitschun/vim-miaminights'
 Plug 'patstockwell/vim-monokai-tasty'
 Plug 'heyitschun/vim-rainier'
 Plug 'heyitschun/vim-seven'
+Plug 'connorholyday/vim-snazzy'
 Plug 'lifepillar/vim-solarized8'
 
 call plug#end()
 
 " Look and feel
+syntax on
 set termguicolors
 set guifont=Consolas:h13
-colorscheme vim-monokai-tasty
+colorscheme snazzy
 set background=dark
 
 " Indent guides
@@ -54,11 +58,11 @@ let g:indentLine_char='│'
 " Lightline
 set noshowmode
 let g:lightline = {
-      \ 'colorscheme': 'monokai_tasty',
+      \ 'colorscheme': 'snazzy',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'gitbranch', 'readonly', 'modified' ] ],
-      \   'right': [ [ 'filename', 'lineinfo' ] ]
+      \             [ 'lineinfo', 'readonly', 'modified' ] ],
+      \   'right': [ [ 'filename', 'gitbranch' ] ]
       \ },
       \ 'component_function': {
       \   'gitbranch': 'FugitiveHead'
@@ -67,7 +71,7 @@ let g:lightline = {
 
 " Line numbers, indentation, rulers
 set cursorline
-set number
+set relativenumber
 highlight LineNr ctermfg=DarkGrey gui=NONE guifg=#6c6c6c guibg=NONE
 highlight ColorColumn ctermbg=250 guibg=#3E3F3C
 set colorcolumn=80
@@ -83,6 +87,13 @@ set formatoptions=1
 set lbr
 
 " Keymappings
+noremap <C-w> <C-y>
+
+" Hardtime
+let g:hardtime_default_on = 1
+let g:hardtime_timeout = 1000
+let g:hardtime_maxcount = 4
+
 "" Windows clipboard
 inoremap <C-v> <ESC>"+pa
 vnoremap <C-c> "+y
