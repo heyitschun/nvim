@@ -1,3 +1,6 @@
+My startup files for [Neovim](https://github.com/neovim/neovim).
+
+
 # Setup
 
 ## Windows
@@ -15,9 +18,14 @@ If Vim Plug is not setup yet, open up PowerShell and run:
 )
 ```
 
-Clone this repository into **~/AppData/Local/nvim/, open up init.vim and run:
+Clone this repository into **~/AppData/Local/nvim/**, open up init.vim and run:
 
 ```
 :PlugInstall
 ```
 
+This will install all the listed plugins into **~/AppData/local/nvim-data/plugged**.
+
+# More Plugins
+
+Visit [VimAwesome](https://vimawesome.com/) for more plugins.

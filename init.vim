@@ -2,7 +2,7 @@
 " https://neovim.io/doc/user/starting.html#base-directories
 
 " Plugins
-call plug#begin('~/AppData/Local/nvim-data/plugged')
+call plug#begin(stdpath('data') . '/plugged')
 
 " Integration
 Plug 'jiangmiao/auto-pairs'
@@ -29,36 +29,35 @@ Plug 'maxmellon/vim-jsx-pretty'
 Plug 'leafoftree/vim-vue-plugin'
 
 " Themes
-Plug 'atelierbram/Base2Tone-vim'
+Plug 'dracula/vim'
 Plug 'heraldofsolace/nisha-vim'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'eemed/sitruuna.vim'
+Plug 'jacoborus/tender.vim'
 Plug 'koirand/tokyo-metro.vim'
-Plug 'heyitschun/vim-ariake'
-Plug 'heyitschun/vim-boho'
+Plug 'ghifarit53/tokyonight-vim'
 Plug 'heyitschun/vim-miaminights'
 Plug 'patstockwell/vim-monokai-tasty'
-Plug 'heyitschun/vim-rainier'
 Plug 'heyitschun/vim-seven'
 Plug 'connorholyday/vim-snazzy'
-Plug 'lifepillar/vim-solarized8'
+Plug 'lifepillar/vim-solarized8' " solarized8_high
 
 call plug#end()
 
 " Look and feel
-syntax on
 set termguicolors
 set guifont=Consolas:h13
-colorscheme snazzy
-set background=dark
+colorscheme tender
+let g:tokyonight_enable_italic = 0
+" set background=dark
 
 " Indent guides
 let g:indentLine_char='│'
 
-" Lightline
+" Lightline "
 set noshowmode
-let g:lightline = {
-      \ 'colorscheme': 'snazzy',
+let g:lightline= {
+      \ 'colorscheme': 'tender',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'lineinfo', 'readonly', 'modified' ] ],
