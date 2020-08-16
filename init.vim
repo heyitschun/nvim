@@ -1,6 +1,6 @@
 " To see what base directories are used go to: 
 " https://neovim.io/doc/user/starting.html#base-directories
-
+"
 " Plugins
 call plug#begin(stdpath('data') . '/plugged')
 
@@ -11,8 +11,6 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'mattn/emmet-vim'
 Plug 'Yggdroot/indentLine'
 Plug 'preservim/nerdcommenter'
-Plug 'preservim/nerdtree'
-Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'danro/rename.vim'
 Plug 'takac/vim-hardtime'
 Plug 'terryma/vim-multiple-cursors'
@@ -25,30 +23,25 @@ Plug 'tpope/vim-fugitive'
 " Languages
 Plug 'leafgarland/typescript-vim'
 Plug 'fatih/vim-go'
+Plug 'pangloss/vim-javascript'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'leafoftree/vim-vue-plugin'
 
 " Themes
-Plug 'dracula/vim'
-Plug 'heraldofsolace/nisha-vim'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'eemed/sitruuna.vim'
-Plug 'jacoborus/tender.vim'
 Plug 'koirand/tokyo-metro.vim'
-Plug 'ghifarit53/tokyonight-vim'
 Plug 'heyitschun/vim-miaminights'
 Plug 'patstockwell/vim-monokai-tasty'
 Plug 'heyitschun/vim-seven'
 Plug 'connorholyday/vim-snazzy'
-Plug 'lifepillar/vim-solarized8' " solarized8_high
 
 call plug#end()
 
 " Look and feel
 set termguicolors
 set guifont=Consolas:h13
-colorscheme tender
-let g:tokyonight_enable_italic = 0
+colorscheme sitruuna
 " set background=dark
 
 " Indent guides
@@ -57,7 +50,7 @@ let g:indentLine_char='│'
 " Lightline "
 set noshowmode
 let g:lightline= {
-      \ 'colorscheme': 'tender',
+      \ 'colorscheme': 'sitruuna',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'lineinfo', 'readonly', 'modified' ] ],
@@ -104,24 +97,6 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 set splitbelow
 set splitright
-
-" NERDTree
-map <C-m> :NERDTreeToggle<CR>
-let g:NERDTreeWinSize=20
-let g:NERDTreeWinPos="right"
-let NERDTreeShowHidden=1
-let g:NERDTreeIndicatorMapCustom = {
-    \ 'Modified'  : '~',
-    \ 'Staged'    : '+',
-    \ 'Untracked' : '*',
-    \ 'Renamed'   : '»',
-    \ 'Unmerged'  : '═',
-    \ 'Deleted'   : '-',
-    \ 'Dirty'     : 'x',
-    \ 'Clean'     : 'ø',
-    \ 'Ignored'   : '*',
-    \ 'Unknown'   : '?'
-    \ }
 
 "" CtrlP
 map ; :CtrlPMixed<CR>
