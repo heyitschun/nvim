@@ -28,9 +28,10 @@ Plug 'maxmellon/vim-jsx-pretty'
 Plug 'leafoftree/vim-vue-plugin'
 
 " Themes
-Plug 'NLKNguyen/papercolor-theme'
 Plug 'eemed/sitruuna.vim'
+Plug 'jacoborus/tender.vim'
 Plug 'koirand/tokyo-metro.vim'
+Plug 'ntk148v/vim-horizon'
 Plug 'heyitschun/vim-miaminights'
 Plug 'patstockwell/vim-monokai-tasty'
 Plug 'heyitschun/vim-seven'
@@ -40,9 +41,9 @@ call plug#end()
 
 " Look and feel
 set termguicolors
-set guifont=Consolas:h13
-colorscheme sitruuna
-" set background=dark
+set guifont=Input:h12
+colorscheme horizon
+"set background=dark
 
 " Indent guides
 let g:indentLine_char='│'
@@ -50,16 +51,21 @@ let g:indentLine_char='│'
 " Lightline "
 set noshowmode
 let g:lightline= {
-      \ 'colorscheme': 'sitruuna',
+      \ 'colorscheme': 'horizon',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'lineinfo', 'readonly', 'modified' ] ],
       \   'right': [ [ 'filename', 'gitbranch' ] ]
       \ },
       \ 'component_function': {
-      \   'gitbranch': 'FugitiveHead'
+      \   'gitbranch': 'FugitiveHead',
+      \   'filename': 'FileNameForLightLine'
       \ },
       \ }
+
+function! FileNameForLightLine()
+  return expand('%')
+endfunction
 
 " Line numbers, indentation, rulers
 set cursorline
@@ -81,7 +87,14 @@ set lbr
 " Keymappings
 noremap <C-w> <C-y>
 
-" Hardtime
+"" CoC GoTo Navigation
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+
+"" Hardtime
 let g:hardtime_default_on = 1
 let g:hardtime_timeout = 1000
 let g:hardtime_maxcount = 4
@@ -99,8 +112,10 @@ set splitbelow
 set splitright
 
 "" CtrlP
-map ; :CtrlPMixed<CR>
+map ; :CtrlP<CR>
 let g:ctrlp_custom_ignore='node_modules\|DS_Store\|git'
 
 " Language settings
 let g:vim_vue_plugin_use_sass=1
+let g:go_highlight_operators=1
+let g:go_highlight_function_calls=1
