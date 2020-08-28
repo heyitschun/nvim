@@ -1,6 +1,6 @@
 "To see what base directories are used go to: 
 "https://neovim.io/doc/user/starting.html#base-directories
-"
+
 "Plugins
 call plug#begin(stdpath('data') . '/plugged')
 
@@ -88,9 +88,13 @@ set formatoptions=1
 set lbr
 
 "Keymappings
+let mapleader = " "
 
 ""Navigation
 noremap <C-w> <C-y>
+
+""Nerdcommenter
+nmap <leader>/ <Plug>NERDCommenterToggle
 
 ""CoC GoTo Navigation
 nmap <silent> gd <Plug>(coc-definition)
@@ -99,7 +103,7 @@ nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
 ""Easymotion
-map <leader><leader><space> <Plug>(easymotion-bd-w)
+map <leader><leader>g <Plug>(easymotion-bd-w)
 
 ""Hardtime
 let g:hardtime_default_on = 1
