@@ -88,6 +88,8 @@ set formatoptions=1
 set lbr
 
 "Keymappings
+
+""Navigation
 noremap <C-w> <C-y>
 
 ""CoC GoTo Navigation
@@ -96,6 +98,8 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
+""Easymotion
+map <leader><leader><space> <Plug>(easymotion-bd-w)
 
 ""Hardtime
 let g:hardtime_default_on = 1
