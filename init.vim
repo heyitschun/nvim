@@ -11,10 +11,8 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'mattn/emmet-vim'
 Plug 'Yggdroot/indentLine'
 Plug 'preservim/nerdcommenter'
-Plug 'danro/rename.vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'takac/vim-hardtime'
-Plug 'terryma/vim-multiple-cursors'
 Plug 'machakann/vim-sandwich'
 Plug 'vimwiki/vimwiki'
 
@@ -31,13 +29,11 @@ Plug 'leafoftree/vim-vue-plugin'
 
 "Themes
 Plug 'morhetz/gruvbox'
-Plug 'bignimbus/pop-punk.vim'
 Plug 'eemed/sitruuna.vim'
 Plug 'jacoborus/tender.vim'
 Plug 'koirand/tokyo-metro.vim'
 Plug 'ntk148v/vim-horizon'
 Plug 'patstockwell/vim-monokai-tasty'
-Plug 'heyitschun/vim-seven'
 Plug 'connorholyday/vim-snazzy'
 
 call plug#end()
@@ -89,6 +85,13 @@ set lbr
 
 "Keymappings
 let mapleader = " "
+nnoremap <esc> :noh<return><esc>
+xnoremap @ :<C-u>call ExecuteMacroOverVisualRange()<CR>
+
+function! ExecuteMacroOverVisualRange()
+  echo "@".getcmdline()
+  execute ":'<,'>normal @".nr2char(getchar())
+endfunction
 
 ""Navigation
 noremap <C-w> <C-y>
