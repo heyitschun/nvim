@@ -5,10 +5,14 @@
 call plug#begin(stdpath('data') . '/plugged')
 
 "Integration
+
+Plug 'H:/Python/vim-lackey'
+
 Plug 'jiangmiao/auto-pairs'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'ctrlpvim/ctrlp.vim'
 Plug 'mattn/emmet-vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install()  }  }
+Plug 'junegunn/fzf.vim'
 Plug 'Yggdroot/indentLine'
 Plug 'preservim/nerdcommenter'
 Plug 'easymotion/vim-easymotion'
@@ -40,17 +44,20 @@ call plug#end()
 
 "Look and feel
 set termguicolors
-set guifont=Input:h12
-colorscheme gruvbox
+set guifont=Consolas:h12
+colorscheme sitruuna
 "set background=dark
 
-"Indent guides
+""easymotion
+let g:EasyMotion_do_shade=0
+
+""Indent guides
 let g:indentLine_char='│'
 
-"Lightline
+""Lightline
 set noshowmode
 let g:lightline= {
-      \ 'colorscheme': 'gruvbox',
+      \ 'colorscheme': 'sitruuna',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'lineinfo', 'readonly', 'modified' ] ],
@@ -66,7 +73,7 @@ function! FileNameForLightLine()
   return expand('%')
 endfunction
 
-"Line numbers, indentation, rulers
+""Line numbers, indentation, rulers
 set cursorline
 set relativenumber
 highlight LineNr ctermfg=DarkGrey gui=NONE guifg=#6c6c6c guibg=NONE
@@ -107,6 +114,7 @@ nmap <silent> gr <Plug>(coc-references)
 
 ""Easymotion
 map <leader><leader>g <Plug>(easymotion-bd-w)
+nmap <leader>s <Plug>(easymotion-overwin-f2)
 
 ""Hardtime
 let g:hardtime_default_on = 1
@@ -126,14 +134,12 @@ set splitbelow
 set splitright
 
 "" File finding (CtrlP)
-map ; :CtrlP<CR>
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
-"map ;f<CR> :Files<CR>
-"map ;g<CR> :GFiles<CR>
-"map ;g?<CR> :GFiles?<CR>
-"map ;b<CR> :Buffers<CR>
-"map ;c<CR> :Colors<CR>
-"map ;l<CR> :Lines<CR>
+map <leader>f<CR> :Files<CR>
+map <leader>g<CR> :GFiles<CR>
+map <leader>g?<CR> :GFiles?<CR>
+map <leader>b<CR> :Buffers<CR>
+map <leader>c<CR> :Colors<CR>
+map <leader>l<CR> :Lines<CR>
 
 "Language settings
 let g:vim_vue_plugin_use_sass=1
@@ -141,4 +147,11 @@ let g:go_highlight_operators=1
 let g:go_highlight_function_calls=1
 
 "Vimwiki
-let g:vimwiki_list = [{'path': '~/notebook/vimwiki'}]
+let g:vimwiki_list = [{'path': '~/notebook/vimwiki', 
+      \ 'syntax': 'markdown', 'ext': '.md'}]
+
+
+"Lackey development
+let g:python3_host_prog = "C:/Users/cpoon/AppData/Local/Programs/Python/Python38/python.exe"
+let g:lackey_ignore = '.git,node_modules'
+"let g:lackey_timestamp_format = '%Y-%m-%dT%H:%M'
