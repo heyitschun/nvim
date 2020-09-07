@@ -1,3 +1,9 @@
 {
+  "explorer.icon.enableNerdfont": false,
+  "explorer.keyMappings": {
+    "<CR>": ["expandable?", "expand", "open"],
+    "v": "open:vsplit"
+  },
+  "explorer.previewAction.onHover": false,
   "tsserver.enable": false
 }

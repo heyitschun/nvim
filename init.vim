@@ -34,18 +34,16 @@ Plug 'leafoftree/vim-vue-plugin'
 "Themes
 Plug 'morhetz/gruvbox'
 Plug 'eemed/sitruuna.vim'
-Plug 'jacoborus/tender.vim'
-Plug 'koirand/tokyo-metro.vim'
+Plug 'srcery-colors/srcery-vim'
 Plug 'ntk148v/vim-horizon'
-Plug 'patstockwell/vim-monokai-tasty'
 Plug 'connorholyday/vim-snazzy'
 
 call plug#end()
 
 "Look and feel
 set termguicolors
-set guifont=Consolas:h12
-colorscheme sitruuna
+set guifont=Cascadia\ Mono\:h11
+colorscheme srcery
 "set background=dark
 
 ""easymotion
@@ -57,7 +55,7 @@ let g:indentLine_char='│'
 ""Lightline
 set noshowmode
 let g:lightline= {
-      \ 'colorscheme': 'sitruuna',
+      \ 'colorscheme': 'srcery',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'lineinfo', 'readonly', 'modified' ] ],
@@ -150,6 +148,27 @@ let g:go_highlight_function_calls=1
 let g:vimwiki_list = [{'path': '~/notebook/vimwiki', 
       \ 'syntax': 'markdown', 'ext': '.md'}]
 
+"explorer
+let g:coc_explorer_global_presets = {
+      \   'floating': {
+      \      'position': 'floating',
+      \   },
+      \   'floatingLeftside': {
+      \      'position': 'floating',
+      \      'floating-position': 'left-center',
+      \      'floating-width': 30,
+      \   },
+      \   'floatingRightside': {
+      \      'position': 'floating',
+      \      'floating-position': 'right-center',
+      \      'floating-width': 30,
+      \   },
+      \   'simplify': {
+      \     'file.child.template': '[selection | clip | 1] [indent][icon | 1] [filename omitCenter 1]'
+      \   }
+      \ }
+nmap <space>e :CocCommand explorer --preset floating<CR>
+autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
 
 "Lackey development
 let g:python3_host_prog = "C:/Users/cpoon/AppData/Local/Programs/Python/Python38/python.exe"
