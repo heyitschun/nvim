@@ -1,4 +1,4 @@
-![Neovim](./nvim-logo.svg)
+![Neovim](https://github.com/heyitschun/nvim/blob/master/neovim-logo.svg)
 
 Startup files for [Neovim](https://github.com/neovim/neovim).
 
