@@ -1,4 +1,6 @@
-My startup files for [Neovim](https://github.com/neovim/neovim).
+Startup files for [Neovim](https://github.com/neovim/neovim).
+
+Folder structure based on [ChristianChiarulli's setup](https://github.com/ChristianChiarulli/nvim).
 
 
 # Setup
