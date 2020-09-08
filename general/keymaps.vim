@@ -16,6 +16,9 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
+"Write to file
+command W :write
+
 "Search highlight
 nnoremap <esc> :noh<return><esc>
 xnoremap @ :<C-u>call ExecuteMacroOverVisualRange()<CR>
