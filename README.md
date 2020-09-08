@@ -1,3 +1,5 @@
+![Neovim](./nvim-logo.svg)
+
 Startup files for [Neovim](https://github.com/neovim/neovim).
 
 Folder structure based on [ChristianChiarulli's setup](https://github.com/ChristianChiarulli/nvim), but not as saucy.
