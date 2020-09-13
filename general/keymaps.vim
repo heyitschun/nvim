@@ -1,5 +1,8 @@
 "Make sure this file is sourced in `init.vim` *before* other config imports.
-"Otherwise the leader mappings will not work.
+"Open init.vim (if it was found during start up)
+command RC :e $MYVIMRC
+
+"Otherwise the leader mappings will not work
 let mapleader=" "
 nnoremap <Space> <Nop>
 

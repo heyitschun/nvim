@@ -15,8 +15,8 @@ source <sfile>:h/plug-config/lightline.vim
 source <sfile>:h/plug-config/vimwiki.vim
 
 "Quick UI
-colorscheme srcery
-let g:lightline.colorscheme = 'srcery'
+colorscheme PaperColor
+let g:lightline.colorscheme = 'PaperColor'
 set guifont=Cascadia\ Mono\:h11
 
 "Language settings. Too few for a whole folder or file.

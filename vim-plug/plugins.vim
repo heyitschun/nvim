@@ -33,6 +33,7 @@ call plug#begin(stdpath('data') . '/plugged')
 
 	"Themes
 	Plug 'morhetz/gruvbox'
+  Plug 'NLKNguyen/papercolor-theme'
 	Plug 'eemed/sitruuna.vim'
 	Plug 'srcery-colors/srcery-vim'
 	Plug 'ntk148v/vim-horizon'
