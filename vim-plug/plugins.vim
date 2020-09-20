@@ -32,11 +32,12 @@ call plug#begin(stdpath('data') . '/plugged')
 	Plug 'leafoftree/vim-vue-plugin'
 
 	"Themes
+  Plug 'sainnhe/edge'
 	Plug 'morhetz/gruvbox'
-  Plug 'NLKNguyen/papercolor-theme'
 	Plug 'eemed/sitruuna.vim'
 	Plug 'srcery-colors/srcery-vim'
 	Plug 'ntk148v/vim-horizon'
+  Plug 'bluz71/vim-moonfly-colors'
 	Plug 'connorholyday/vim-snazzy'
 
 call plug#end()

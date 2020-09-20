@@ -1,6 +1,7 @@
 "Make sure this file is sourced in `init.vim` *before* other config imports.
 "Open init.vim (if it was found during start up)
 command RC :e $MYVIMRC
+command TD :put =strftime('%Y-%m-%d')
 
 "Otherwise the leader mappings will not work
 let mapleader=" "
@@ -22,9 +23,13 @@ nnoremap <C-H> <C-W><C-H>
 "Write to file
 command W :write
 
-"Search highlight
+"Search
+"Turn off search result highlights on Enter
 nnoremap <esc> :noh<return><esc>
 xnoremap @ :<C-u>call ExecuteMacroOverVisualRange()<CR>
+
+"Search for all words under cursor in document without moving cursor
+nnoremap = *N
 
 function! ExecuteMacroOverVisualRange()
   echo "@".getcmdline()

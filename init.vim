@@ -15,8 +15,8 @@ source <sfile>:h/plug-config/lightline.vim
 source <sfile>:h/plug-config/vimwiki.vim
 
 "Quick UI
-colorscheme PaperColor
-let g:lightline.colorscheme = 'PaperColor'
+colorscheme gruvbox
+let g:lightline.colorscheme = 'gruvbox'
 set guifont=Cascadia\ Mono\:h11
 
 "Language settings. Too few for a whole folder or file.
