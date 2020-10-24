@@ -8,7 +8,8 @@ let mapleader=" "
 nnoremap <Space> <Nop>
 
 "Navigation
-noremap <C-w> <C-y>
+nnoremap <C-w> <C-y>
+nnoremap G Gzz
 
 "Windows clipboard
 inoremap <C-v> <ESC>"+pa
