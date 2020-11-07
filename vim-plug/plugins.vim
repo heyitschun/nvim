@@ -30,6 +30,7 @@ Plug 'leafgarland/typescript-vim'
 Plug 'fatih/vim-go'
 Plug 'pangloss/vim-javascript'
 Plug 'maxmellon/vim-jsx-pretty'
+Plug 'uarun/vim-protobuf'
 Plug 'leafoftree/vim-vue-plugin'
 
 "Themes
