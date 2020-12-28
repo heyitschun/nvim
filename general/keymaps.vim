@@ -30,7 +30,7 @@ nnoremap <esc> :noh<return><esc>
 xnoremap @ :<C-u>call ExecuteMacroOverVisualRange()<CR>
 
 "Search for all words under cursor in document without moving cursor
-nnoremap = *N
+nnoremap - *N
 
 function! ExecuteMacroOverVisualRange()
   echo "@".getcmdline()

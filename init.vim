@@ -18,8 +18,8 @@ source <sfile>:h/languages/go.vim
 source <sfile>:h/languages/python.vim
 
 "Quick UI
-colorscheme oceanicnext
-let g:lightline.colorscheme = 'oceanicnext'
+colorscheme ayu
+let g:lightline.colorscheme = 'ayu'
 set guifont=Cascadia\ Mono:h11
 
 "Language settings. Too few for a whole folder or file.
