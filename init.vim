@@ -24,8 +24,3 @@ set guifont=Cascadia\ Mono:h11
 
 "Language settings. Too few for a whole folder or file.
 let g:vim_vue_plugin_use_sass = 1
-
-"Lackey development
-let g:python3_host_prog = "C:/Users/cpoon/AppData/Local/Programs/Python/Python38/python.exe"
-let g:lackey_ignore = '.git,node_modules'
-"let g:lackey_timestamp_format = '%Y-%m-%dT%H:%M'
