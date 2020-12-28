@@ -5,8 +5,6 @@ call plug#begin(stdpath('data') . '/plugged')
 
 "Integration
 
-Plug 'H:/Python/vim-lackey'
-
 Plug 'jiangmiao/auto-pairs'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'mattn/emmet-vim'
