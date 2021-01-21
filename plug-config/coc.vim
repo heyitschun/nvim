@@ -1,6 +1,5 @@
 "Extensions
 let g:coc_global_extensions = [
-    \ 'coc-deno',
     \ 'coc-explorer',
     \ 'coc-json',
     \ 'coc-python',

@@ -1,6 +1,6 @@
 "General Vim settings
 
-set colorcolumn=80
+set colorcolumn=81
 set cursorline
 set expandtab
 set formatoptions=1
@@ -12,4 +12,7 @@ set softtabstop=2
 set splitbelow
 set splitright
 set tabstop=2
-set termguicolors
+
+if (has('termguicolors'))
+  set termguicolors
+endif

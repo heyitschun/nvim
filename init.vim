@@ -12,15 +12,17 @@ source <sfile>:h/plug-config/fzf.vim
 source <sfile>:h/plug-config/hardtime.vim
 source <sfile>:h/plug-config/indentLine.vim
 source <sfile>:h/plug-config/lightline.vim
+source <sfile>:h/plug-config/rnvimr.vim
 source <sfile>:h/plug-config/vimwiki.vim
 
 source <sfile>:h/languages/go.vim
 source <sfile>:h/languages/python.vim
 
 "Quick UI
-colorscheme ayu
-let g:lightline.colorscheme = 'ayu'
-set guifont=Cascadia\ Mono:h11
+colorscheme material
+let g:lightline.colorscheme = 'material_vim'
+let g:oceanic_for_polyglot = 1
 
 "Language settings. Too few for a whole folder or file.
 let g:vim_vue_plugin_use_sass = 1
+
