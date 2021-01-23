@@ -13,7 +13,6 @@ Plug 'Yggdroot/indentLine'
 Plug 'preservim/nerdcommenter'
 Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
 Plug 'easymotion/vim-easymotion'
-Plug 'takac/vim-hardtime'
 Plug 'machakann/vim-sandwich'
 Plug 'vimwiki/vimwiki'
 

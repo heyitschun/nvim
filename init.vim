@@ -9,7 +9,6 @@ source <sfile>:h/general/settings.vim
 source <sfile>:h/plug-config/coc.vim
 source <sfile>:h/plug-config/easymotion.vim
 source <sfile>:h/plug-config/fzf.vim
-source <sfile>:h/plug-config/hardtime.vim
 source <sfile>:h/plug-config/indentLine.vim
 source <sfile>:h/plug-config/lightline.vim
 source <sfile>:h/plug-config/rnvimr.vim
