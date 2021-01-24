@@ -11,7 +11,6 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install()   }   }
 Plug 'junegunn/fzf.vim'
 Plug 'Yggdroot/indentLine'
 Plug 'preservim/nerdcommenter'
-Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
 Plug 'easymotion/vim-easymotion'
 Plug 'machakann/vim-sandwich'
 Plug 'vimwiki/vimwiki'

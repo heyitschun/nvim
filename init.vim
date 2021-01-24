@@ -11,7 +11,6 @@ source <sfile>:h/plug-config/easymotion.vim
 source <sfile>:h/plug-config/fzf.vim
 source <sfile>:h/plug-config/indentLine.vim
 source <sfile>:h/plug-config/lightline.vim
-source <sfile>:h/plug-config/rnvimr.vim
 source <sfile>:h/plug-config/vimwiki.vim
 
 source <sfile>:h/languages/go.vim
